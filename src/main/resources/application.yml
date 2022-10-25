@@ -1,0 +1,15 @@
+looging:
+   level:
+      org.springframework: ERROR
+      com.hemtest: STAGING
+      
+spring:
+  profiles:
+    active: dev
+  main:
+    banner-mode: off
+
+thread-pool: 12
+
+server:
+  port : 3000
