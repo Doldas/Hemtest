@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Hemtest</groupId>
 	<artifactId>Hemtest</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>Hemtest</name>
 	<description>A text analyzing web api software</description>
 	<dependencies>
