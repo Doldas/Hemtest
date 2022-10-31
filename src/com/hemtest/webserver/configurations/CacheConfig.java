@@ -5,6 +5,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 /**
  * Cache Configuration Class
  *
@@ -14,8 +15,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableCaching
 public class CacheConfig {
-    @Bean
-    public CacheManager cacheManager() {
-        return new ConcurrentMapCacheManager("count"); // caching for /count requests
-    }
+	@Bean
+	public CacheManager cacheManager() {
+		return new ConcurrentMapCacheManager("count"); // caching for /count requests
+	}
 }
