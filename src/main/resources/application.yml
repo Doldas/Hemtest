@@ -2,14 +2,33 @@ looging:
    level:
       org.springframework: ERROR
       com.hemtest: STAGING
-      
 spring:
-  profiles:
-    active: dev
-  main:
-    banner-mode: off
-
-thread-pool: 12
-
+   profiles:
+   active: dev
+   main:
+      banner-mode: off
+async:
+   max-poolsize: 12
+   core-poolsize: 3
+words:
+   counter:
+      max-characters: 5000
+      display:
+         max-words: 10
 server:
   port : 3000
+resilience4j:
+  retry:
+    instances:
+      countwords:
+         maxRetryAttempts: 3
+         waitDuration: 3s
+         enableRandomizedWait: true
+         randomizedWaitFactor: 0.5
+management:
+   server:
+      port: 3030
+   endpoints:
+      web:
+         exposure:
+            include: retries, retryevents, metrics
